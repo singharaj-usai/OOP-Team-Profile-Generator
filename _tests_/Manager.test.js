@@ -2,22 +2,22 @@ const Manager = require('../lib/Manager')
 const worker = Manager('Tammer', '4', 'tammer@yahoo.com', '1')//name, id, email
 
 describe('Manager', () => {
-describe('Tammer', () => {
+describe('name', () => {
     it('should create an object with a name and age if provided valid arguments', () => {
         expect(worker.name).toEqual('Tammer')
     })
 })
-describe('4', () => {
+describe('id', () => {
     it('should create an object with a name and age if provided valid arguments', () => {
         expect(worker.id).toEqual('4')
     })
 })
-describe('tammer@yahoo.com', () => {
+describe('email', () => {
     it('should create an object with a name and age if provided valid arguments', () => {
         expect(worker.email).toEqual('tammer@yahoo.com')
     })
 })
-describe('1', () => {
+describe('officeNumber', () => {
     it('should create an object with a name and age if provided valid arguments', () => {
         expect(worker.officeNumber).toEqual('1')
     })

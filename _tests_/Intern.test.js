@@ -2,22 +2,22 @@ const Intern = require('../lib/Intern')
 const worker = Intern('John', '3', 'John@yahoo.com', 'MSU')//name, id, email
 
 describe('Intern', () => {
-describe('John', () => {
+describe('name', () => {
     it('should create an object with a name and age if provided valid arguments', () => {
         expect(worker.name).toEqual('John')
     })
 })
-describe('3', () => {
+describe('id', () => {
     it('should create an object with a name and age if provided valid arguments', () => {
         expect(worker.id).toEqual('23')
     })
 })
-describe('John@yahoo.com', () => {
+describe('email', () => {
     it('should create an object with a name and age if provided valid arguments', () => {
         expect(worker.email).toEqual('John@yahoo.com')
     })
 })
-describe('MSU', () => {
+describe('school', () => {
     it('should create an object with a name and age if provided valid arguments', () => {
         expect(worker.school).toEqual('MSU')
     })

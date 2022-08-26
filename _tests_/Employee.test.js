@@ -2,17 +2,17 @@ const Employee = require('../lib/Employee')
 const worker = Employee('Jared', '1', 'Jared@yahoo.com')//name, id, email
 
 describe('Employee', () => {
-describe('Jared', () => {
+describe('name', () => {
     it('should create an object with a name and age if provided valid arguments', () => {
         expect(worker.name).toEqual('Jared')
     })
 })
-describe('1', () => {
+describe('id', () => {
     it('should create an object with a name and age if provided valid arguments', () => {
         expect(worker.id).toEqual('1')
     })
 })
-describe('Jared@yahoo.com', () => {
+describe('email', () => {
     it('should create an object with a name and age if provided valid arguments', () => {
         expect(worker.email).toEqual('Jared@yahoo.com')
     })
