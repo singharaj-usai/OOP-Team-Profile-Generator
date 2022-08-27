@@ -1,5 +1,5 @@
 const Intern = require('../lib/Intern')
-const worker = Intern('John', '3', 'John@yahoo.com', 'MSU')//name, id, email
+const worker = new Intern('John', '3', 'John@yahoo.com', 'MSU')//name, id, email
 
 describe('Intern', () => {
 describe('name', () => {
@@ -9,7 +9,7 @@ describe('name', () => {
 })
 describe('id', () => {
     it('should create an object with a name and age if provided valid arguments', () => {
-        expect(worker.id).toBe('23')
+        expect(worker.id).toBe('3')
     })
 })
 describe('email', () => {

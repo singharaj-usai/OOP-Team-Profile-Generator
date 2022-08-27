@@ -1,5 +1,5 @@
 const Engineer = require('../lib/Engineer')
-const worker = Engineer('Alec', '2', 'Alec@yahoo.com', 'Alec\'s Github')//name, id, email
+const worker = new Engineer('Alec', '2', 'Alec@yahoo.com', 'Alec\'s Github')//name, id, email
 
 describe('Engineer', () => {
 describe('name', () => {
