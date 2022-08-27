@@ -1,25 +1,25 @@
-const Manager = require('../lib/Manager')
-const worker = Manager('Tammer', '4', 'tammer@yahoo.com', '1')//name, id, email
+const Engineer = require('../lib/Engineer')
+const worker = Engineer('Alec', '2', 'Alec@yahoo.com', 'Alec\'s Github')//name, id, email
 
-describe('Manager', () => {
+describe('Engineer', () => {
 describe('name', () => {
     it('should create an object with a name and age if provided valid arguments', () => {
-        expect(worker.name).toEqual('Tammer')
+        expect(worker.name).toBe('Alec')
     })
 })
 describe('id', () => {
     it('should create an object with a name and age if provided valid arguments', () => {
-        expect(worker.id).toEqual('4')
+        expect(worker.id).toBe('2')
     })
 })
 describe('email', () => {
     it('should create an object with a name and age if provided valid arguments', () => {
-        expect(worker.email).toEqual('tammer@yahoo.com')
+        expect(worker.email).toBe('Alec@yahoo.com')
     })
 })
-describe('officeNumber', () => {
+describe('github', () => {
     it('should create an object with a name and age if provided valid arguments', () => {
-        expect(worker.officeNumber).toEqual('1')
+        expect(worker.github).toBe('Alec\'s Github')
     })
 })
 })

@@ -4,17 +4,17 @@ const worker = Employee('Jared', '1', 'Jared@yahoo.com')//name, id, email
 describe('Employee', () => {
 describe('name', () => {
     it('should create an object with a name and age if provided valid arguments', () => {
-        expect(worker.name).toEqual('Jared')
+        expect(worker.name).toBe('Jared')
     })
 })
 describe('id', () => {
     it('should create an object with a name and age if provided valid arguments', () => {
-        expect(worker.id).toEqual('1')
+        expect(worker.id).toBe('1')
     })
 })
 describe('email', () => {
     it('should create an object with a name and age if provided valid arguments', () => {
-        expect(worker.email).toEqual('Jared@yahoo.com')
+        expect(worker.email).toBe('Jared@yahoo.com')
     })
 })
 })

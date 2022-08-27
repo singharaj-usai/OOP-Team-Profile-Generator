@@ -4,22 +4,22 @@ const worker = Intern('John', '3', 'John@yahoo.com', 'MSU')//name, id, email
 describe('Intern', () => {
 describe('name', () => {
     it('should create an object with a name and age if provided valid arguments', () => {
-        expect(worker.name).toEqual('John')
+        expect(worker.name).toBe('John')
     })
 })
 describe('id', () => {
     it('should create an object with a name and age if provided valid arguments', () => {
-        expect(worker.id).toEqual('23')
+        expect(worker.id).toBe('23')
     })
 })
 describe('email', () => {
     it('should create an object with a name and age if provided valid arguments', () => {
-        expect(worker.email).toEqual('John@yahoo.com')
+        expect(worker.email).toBe('John@yahoo.com')
     })
 })
 describe('school', () => {
     it('should create an object with a name and age if provided valid arguments', () => {
-        expect(worker.school).toEqual('MSU')
+        expect(worker.school).toBe('MSU')
     })
 })
 })
