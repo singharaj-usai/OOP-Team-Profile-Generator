@@ -1,20 +1,41 @@
 //Basically make something similar to the node.js readme assignment
 const inquirer = require('inquirer')
 
-const fs = require('fs')
-//const generateMarkdown = require('./utils/generateMarkdown.js');
-const Employee = require('./lib/Employee')
+const fs = require('fs');
+const generateMarkdown = require('./utils/generateMarkdown.js');
+//const Employee = require('./lib/Employee')
 
-const Intern = require('./lib/Intern')
+//const Intern = require('./lib/Intern')
 
-const Manager = require('./lib/Manager')
+//const Manager = require('./lib/Manager')
 
-const Engineer = require('./lib/Engineer')
+//const Engineer = require('./lib/Engineer')
 
 let Employees = []
 // Function to initialize app
-function init() {
-manager()
+
+//function questions(){
+
+inquirer
+.prompt([
+   {
+      type: 'list',
+      name: 'choices',
+      message: 'Which employee do you want to choose?',
+      choices: ['manager', 'intern', 'engineer', 'no more employee'],
+   }
+])
+.then(answers => {
+   console.info('Answer:', answers.choices);
+   manager()
+
+   engineer()
+
+   intern()
+
+})
+
+
 function manager() {
     inquirer
     .prompt([
@@ -39,14 +60,9 @@ function manager() {
             message: 'What is the manager\'s office number?', 
          }
     ])
-    .then((results) => {
-        const data = new Manager (results.name, results.id, results.email, results.officeNumber)
-        console.log(data)
-        Employees.push(data)
-    })
 }
 
-engineer()
+
 function engineer() {
     inquirer
     .prompt([
@@ -71,14 +87,8 @@ function engineer() {
             message: 'What is the engineer\'s github', 
          }
     ])
-    .then((results) => {
-        const data = new Engineer (results.name, results.id, results.email, results.github)
-        console.log(data)
-        Employees.push(data)
-    })
 }
 
-intern()
 function intern() {
     inquirer
     .prompt([
@@ -103,16 +113,6 @@ function intern() {
             message: 'What is the intern\'s school', 
          }
     ])
-    .then((results) => {
-        const data = new Intern (results.name, results.id, results.email, results.school)
-        console.log(data)
-        Employees.push(data)
-    })
 }
+//}
 
-
-
-}
-
-// Function call to initialize app
-init()
