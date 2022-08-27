@@ -14,10 +14,13 @@
 
 💻 Users can generate a team employee profile using Node.js on the command line.
 
+✅ Tests passes
+
 * Instructions
     * Download the repo to your machine
     * Use Gitbash or a cmd program in the folder of the repo
     * Install the node module packages by typing in "npm install"
+    * To test, run 'npm run start'
 
 ## Links
 
