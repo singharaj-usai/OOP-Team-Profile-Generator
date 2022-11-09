@@ -178,3 +178,14 @@ const addEmployee = () => {
       }
     });
 };
+
+const writeFile = data => {
+   fs.writeFile("./dist/index.html", data, error => {
+      if (error) {
+         console.log(error);
+         return;
+      } else {
+         console.log("Your team profile is successfully generated!")
+      }
+   });
+};
