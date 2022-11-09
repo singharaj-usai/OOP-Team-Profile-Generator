@@ -172,7 +172,7 @@ const addEmployee = () => {
         console.log(employee);
       }
       team.push(employee);
-
+      console.log(employee);
       if (confirm) {
         return addEmployee(team);
       } else {
