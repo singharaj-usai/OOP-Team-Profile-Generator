@@ -35,7 +35,21 @@ const addManager = () => {
         }
       },
     },
-
+    {
+      type: "input",
+      name: "email",
+      message: "What is the manager's Email?",
+      validate: email => {
+         //Regex email
+         valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
+         if (valid) {
+            return true;
+         } else {
+            console.log("Please enter manager's Email!")
+            return false;
+         }
+      }
+    },
     
   ]);
 };
