@@ -22,5 +22,20 @@ const addManager = () => {
         }
       },
     },
+    {
+      type: "input",
+      name: "id",
+      message: "What is the manager's ID?",
+      validate: idInput => {
+        if (idInput) {
+          return true;
+        } else {
+          console.log("Please enter manager's ID!");
+          return false;
+        }
+      },
+    },
+
+    
   ]);
 };
