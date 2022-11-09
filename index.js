@@ -72,3 +72,55 @@ const addManager = () => {
       console.log(manager);
     });
 };
+
+const addEmployee = () => {
+  return inquirer.prompt([
+    {
+      type: "list",
+      name: "role",
+      message: "What is the employee's role?",
+      choices: ["Engineer", "Intern"],
+    },
+    {
+      type: "input",
+      name: "name",
+      message: "What is the name of the employee?",
+      validate: (nameInput) => {
+        if (nameInput) {
+          return true;
+        } else {
+          console.log("Please enter an employee's name!");
+          return false;
+        }
+      },
+    },
+    {
+      type: "input",
+      name: "id",
+      message: "What is the employee's ID?",
+      validate: (idInput) => {
+        if (idInput) {
+          return true;
+        } else {
+          console.log("Please enter employee's ID!");
+          return false;
+        }
+      },
+    },
+    {
+      type: "input",
+      name: "email",
+      message: "What is the employee's Email?",
+      validate: (email) => {
+        //Regex email
+        valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
+        if (valid) {
+          return true;
+        } else {
+          console.log("Please enter the employee's Email!");
+          return false;
+        }
+      },
+    },
+  ]);
+};
