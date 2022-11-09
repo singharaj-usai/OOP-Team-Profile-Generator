@@ -136,5 +136,25 @@ const addEmployee = () => {
          }
       },
     },
-  ]);
+    {
+      type: "input",
+      name: "school",
+      message: "What is the intern's school?",
+      when: (input) => input.role === "Intern",
+      validate: schoolInput => {
+         if (schoolInput) {
+            return true;
+         } else {
+            console.log("Please enter the intern's school name!");
+            return false;
+         }
+      },
+    },
+    {
+      type: "confirm",
+      name: "confirm",
+      message: "Do you want to add more members?",
+      default: false
+    }
+  ])
 };
