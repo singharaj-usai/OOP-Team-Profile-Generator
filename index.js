@@ -5,6 +5,8 @@ const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const Manager = require("./lib/Manager");
 
+const genHTML = require("./utils/generateMarkdown");
+
 const team = [];
 
 const addManager = () => {
@@ -179,19 +181,25 @@ const addEmployee = () => {
     });
 };
 
-const writeFile = data => {
-   fs.writeFile("./dist/index.html", data, error => {
-      if (error) {
-         console.log(error);
-         return;
-      } else {
-         console.log("Your team profile is successfully generated!")
-      }
-   });
+const writeFile = (data) => {
+  fs.writeFile("./dist/index.html", data, (error) => {
+    if (error) {
+      console.log(error);
+      return;
+    } else {
+      console.log("Your team profile is successfully generated!");
+    }
+  });
 };
 
 addManager()
-.then(addEmployee)
-.then(team => {
-
-})
+  .then(addEmployee)
+  .then((team) => {
+    return genHTML(team);
+  })
+  .then((dataHTML) => {
+    return writeFile(dataHTML);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
