@@ -20,7 +20,7 @@ const addManager = () => {
           console.log("Please enter manager's name!");
           return false;
         }
-      },
+      }
     },
     {
       type: "input",
@@ -33,7 +33,7 @@ const addManager = () => {
           console.log("Please enter manager's ID!");
           return false;
         }
-      },
+      }
     },
     {
       type: "input",
