@@ -122,5 +122,19 @@ const addEmployee = () => {
         }
       },
     },
+    {
+      type: "input",
+      name: "github",
+      message: "What is the employee's GitHub username?",
+      when: (input) => input.role === "Engineer",
+      validate: usernameInput => {
+         if (usernameInput) {
+            return true;
+         } else {
+            console.log("Please enter the employee's GitHub username!");
+            return false;
+         }
+      },
+    },
   ]);
 };
