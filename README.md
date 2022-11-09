@@ -1,11 +1,10 @@
-# OOP Team Profile Generator
+## OOP Team Profile Generator
 
 ## Index
-- [OOP Team Profile Generator](#oop-team-profile-generator)
-  - [Index](#index)
 - [Overview](#overview)
   - [Summary](#summary)
   - [Links](#links)
+  - [Screenshot](#screenshot)
   - [Made With](#made-with)
 
 # Overview
@@ -28,6 +27,12 @@
 ## Links
 
 Repository URL: https://github.com/singharaj-usai/OOP-Team-Profile-Generator
+
+## Screenshot
+
+* Team Profile Page
+  * Generated after entering all of the prompts.
+![](Screenshot/Screenshot%202022-11-09%20180506.png)
 
 ## Made With
 
