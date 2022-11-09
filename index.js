@@ -50,6 +50,24 @@ const addManager = () => {
          }
       }
     },
-    
-  ]);
+    {
+      type: "input",
+      name: "officeNumber",
+      message: "What is the manager's office number?",
+      validate: officeInput => {
+         if (officeInput) {
+            return true;
+         } else {
+            console.log("Please enter manager's office number!")
+            return false;
+         }
+      }
+    }
+  ])
+  .then(managerInput => {
+   const { name, id, email, officeNumber } = managerInput;
+   const manager = new Manager(name, id, email, officeNumber);
+   team.push(manager);
+   console.log(manager); 
+  })
 };
