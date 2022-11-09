@@ -189,3 +189,9 @@ const writeFile = data => {
       }
    });
 };
+
+addManager()
+.then(addEmployee)
+.then(team => {
+
+})
