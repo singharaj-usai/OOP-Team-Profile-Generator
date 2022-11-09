@@ -1,10 +1,12 @@
 # OOP Team Profile Generator
 
 ## Index
-1. [Overview](#overview)
-    - [Summary](#summary)
-    - [Links](#links)
-    - [Made with](#made-with)
+- [OOP Team Profile Generator](#oop-team-profile-generator)
+  - [Index](#index)
+- [Overview](#overview)
+  - [Summary](#summary)
+  - [Links](#links)
+  - [Made With](#made-with)
 
 # Overview
 
@@ -17,17 +19,18 @@
 ✅ Tests passes
 
 * Instructions
-    * Download the repo to your machine
-    * Use Gitbash or a cmd program in the folder of the repo
-    * Install the node module packages by typing in "npm install"
-    * To test, run 'npm run start'
+    * Download the repo to your machine using the `git clone` tag.
+    * On your IDE, use the terminal and type `npm i` to install node_modules.
+    * To use the `tests` folder, type `npm test`.
+    * To start generating, type `node index` and enter the prompts.
+    * To see your generated profile, open the `dist` folder and start the `index.html` file in your browser with `Open with Live Server`.
 
 ## Links
-
-[Video instruction]()
 
 Repository URL: https://github.com/singharaj-usai/OOP-Team-Profile-Generator
 
 ## Made With
 
 * Node.JS
+* OOP
+* Jest
